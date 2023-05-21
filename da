@@ -1,0 +1,35 @@
+[33mcommit 0806985ab65c0d78dab6b106c9db0e3136e3c143[m[33m ([m[1;36mHEAD[m[33m)[m
+Author: Ivan <ivansamwabina@gmail.com>
+Date:   Sun May 21 13:28:37 2023 +0800
+
+    Reverting to 'e56064e3eeaba45d20392e89cd2f3cc4e85a146f'
+
+[33mcommit e56064e3eeaba45d20392e89cd2f3cc4e85a146f[m[33m ([m[1;31morigin/master[m[33m, [m[1;32mmaster[m[33m)[m
+Author: Ivan <ivansamwabina@gmail.com>
+Date:   Sat May 20 23:37:14 2023 +0800
+
+    added a test input for registration page
+
+[33mcommit 073aededb8ef1ae08c474474e64578b965030a2e[m
+Author: Ivan <ivansamwabina@gmail.com>
+Date:   Fri May 19 16:29:16 2023 +0800
+
+    added migrations
+
+[33mcommit cdb7eb7e6724a122f9f9e59733abdb365e7fee8c[m
+Author: Ivan <ivansamwabina@gmail.com>
+Date:   Thu May 18 22:36:25 2023 +0800
+
+    updated the about view
+
+[33mcommit 3d1d3a9c482528d889a78a218e687839610f8351[m
+Author: Ivan <ivansamwabina@gmail.com>
+Date:   Thu May 18 13:26:08 2023 +0800
+
+    added about view
+
+[33mcommit e0e29e5ecdc4f42f133ed50333d5cae0521a4bf8[m
+Author: Ivan <ivansamwabina@gmail.com>
+Date:   Wed May 17 22:29:44 2023 +0800
+
+    first commit
