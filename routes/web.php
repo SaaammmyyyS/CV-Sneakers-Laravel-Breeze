@@ -18,6 +18,12 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+
+// Not yet finish
+// Route::prefix('admin')->middleware()->group(function(){
+//     Route::get('/contact', [AdminController::class, ]
+// });
+
 Route::get('/about', function () {
     return view('about');
 })->middleware(['auth', 'verified'])->name('about');
