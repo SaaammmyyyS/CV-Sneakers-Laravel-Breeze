@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\AdminController;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,15 +15,21 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+/* --------------- Admin Route -----------*/
+
+Route::prefix('admin')->group(function (){
+    Route::get('/login', [AdminController::class, 'Index'])->name('login_from');
+
+    Route::get('/login/owner', [AdminController::class, 'Login'])->name('admin.login');
+
+    Route::get('/dashboard', [AdminController::class, 'Dashboard'])->name('admin.dashboard');
+});
+
+/* --------------- Admin Route -----------*/
+
 Route::get('/', function () {
     return view('welcome');
 });
-
-
-// Not yet finish
-// Route::prefix('admin')->middleware()->group(function(){
-//     Route::get('/contact', [AdminController::class, ]
-// });
 
 Route::get('/about', function () {
     return view('about');
