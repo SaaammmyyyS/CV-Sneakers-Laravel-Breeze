@@ -20,9 +20,9 @@ use App\Http\Controllers\AdminController;
 Route::prefix('admin')->group(function (){
     Route::get('/login', [AdminController::class, 'Index'])->name('login_from');
 
-    Route::get('/login/owner', [AdminController::class, 'Login'])->name('admin.login');
+    Route::post('/login/owner', [AdminController::class, 'Login'])->name('admin.login');
 
-    Route::get('/dashboard', [AdminController::class, 'Dashboard'])->name('admin.dashboard');
+    Route::get('/dashboard', [AdminController::class, 'Dashboard'])->name('admin.dashboard')->middleware('admin');
 });
 
 /* --------------- Admin Route -----------*/

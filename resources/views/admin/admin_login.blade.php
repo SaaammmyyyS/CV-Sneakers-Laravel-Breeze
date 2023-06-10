@@ -2,7 +2,13 @@
     <!-- Session Status -->
     <x-auth-session-status class="mb-4" :status="session('status')" />
 
-    <form method="POST" action="{{ route('login') }}">
+    @if(Session::has('error'))
+        <div class="bg-orange-100 border-l-4 border-orange-500 text-orange-700 p-4" role="alert">
+            <p class="font-bold">Be Warned</p>
+            <p>{{session::get('error')}}</p>
+        </div>
+    @endif
+    <form method="POST" action="{{ route('admin.login') }}">
         @csrf
 
         <div class="flex flex-col sm:justify-center items-center my-6 text-white font-bold text-xl tracking-widest rounded-xl">
@@ -12,7 +18,7 @@
 
         <!-- Username -->
         <div>
-            <x-input-label for="email" :value="__('Username')" />
+            <x-input-label for="email" :value="__('Email')" />
             <x-text-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required autofocus autocomplete="username" />
             <x-input-error :messages="$errors->get('email')" class="mt-2" />
         </div>
